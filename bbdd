@@ -1,0 +1,62 @@
+CREATE DATABASE proyecto;
+
+
+-- All traffic
+CREATE TABLE conexiones_4(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    src_mac VARCHAR(17) NOT NULL,
+    dest_mac VARCHAR(17) NOT NULL,
+    src_ip VARCHAR(15) NOT NULL,
+    dest_ip VARCHAR(15) NOT NULL,
+    tipo VARCHAR(10) NOT NULL,
+    datos VARCHAR(10) NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE enrutamiento_incorrecto(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    src_mac VARCHAR(17) NOT NULL,
+    src_ip VARCHAR(15) NOT NULL,
+    dest_mac VARCHAR(17) NOT NULL,
+    dest_ip VARCHAR(15) NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+
+
+CREATE TABLE arp_poisoning(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    src_mac VARCHAR(17) NOT NULL,
+    src_ip VARCHAR(15) NOT NULL,
+    dest_mac VARCHAR(17) NOT NULL,
+    dest_ip VARCHAR(15) NOT NULL,
+    opcode VARCHAR(1) NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+
+
+CREATE TABLE dhcp_spoofing(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    src_mac VARCHAR(17) NOT NULL,
+    dest_mac VARCHAR(17) NOT NULL,
+    dhcp_ip VARCHAR(15) NOT NULL,
+    your_ip VARCHAR(15) NOT NULL,
+    message_type VARCHAR(1) NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+
+
+CREATE TABLE posible_dos(
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    fecha TIMESTAMP NOT NULL,
+    src_ip VARCHAR(15) NOT NULL,
+    dest_ip VARCHAR(15) NOT NULL,
+    paquetes VARCHAR(10) NOT NULL,
+    pais VARCHAR(30) NOT NULL,
+    pais_codigo VARCHAR(5) NOT NULL,
+    region VARCHAR(30) NOT NULL,
+    region_codigo VARCHAR(5) NOT NULL,
+    ciudad VARCHAR(30) NOT NULL,
+    latitud VARCHAR(20) NOT NULL,
+    longitud VARCHAR(20) NOT NULL
+)
