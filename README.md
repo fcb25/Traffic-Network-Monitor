@@ -3,8 +3,8 @@
 This project is my master's thesis in Cybersecurity at the University of Alicante.
 The project is a network traffic monitor that allows the capture of traffic in real time, store it and represent the data in a user interface. It also incorporates mechanisms to detect Man in the Middle attacks and possible Denial of Service attacks.
 
-[![All Traffic][all-traffic]](https://example.com)
-[![DoS Attacks][dos-attakcs]](https://example.com)
+[![All Traffic][all-traffic]](https://github.com/fcb25/Traffic-Network-Monitor/blob/main/readme_images/all_traffic_graph.JPG)
+[![DoS Attacks][dos-attakcs]](https://github.com/fcb25/Traffic-Network-Monitor/blob/main/readme_images/possible_dos_table.JPG)
 
 ## Technology Infrastructure
 The project has been developed in Ubuntu 20.04 using Python3. It uses MySQL database and Grafana for data representation.
